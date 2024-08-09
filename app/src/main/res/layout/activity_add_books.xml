@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".AddBooks"
+    android:background="@color/baj1">
+
+        <EditText
+            android:id="@+id/productNameEditText"
+            android:layout_width="381dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="36dp"
+            android:autofillHints=""
+            android:hint="@string/book_name"
+            android:textColor="@color/baj1"
+            android:inputType="text"
+            android:textColorHint="@color/baj4"
+            android:paddingStart="10dp"
+            android:background="@drawable/roundedborder"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/productDescriptionEditText"
+            android:layout_width="386dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/productNameEditText"
+            android:layout_marginTop="34dp"
+            android:autofillHints=""
+            android:hint="@string/book_description"
+            android:inputType="text"
+            android:textColorHint="@color/baj4"
+            android:textColor="@color/baj1"
+            android:paddingStart="10dp"
+            android:background="@drawable/roundedborder"
+            tools:ignore="RtlSymmetry"/>
+
+        <EditText
+            android:id="@+id/productPriceEditText"
+            android:layout_width="392dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/productDescriptionEditText"
+            android:layout_marginTop="33dp"
+            android:autofillHints=""
+            android:hint="@string/book_price"
+            android:inputType="numberDecimal"
+            android:textColorHint="@color/baj4"
+            android:textColor="@color/baj1"
+            android:paddingStart="10dp"
+            android:background="@drawable/roundedborder"
+            tools:ignore="RtlSymmetry"/>
+
+        <EditText
+            android:id="@+id/productImageUrlEditText"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/productPriceEditText"
+            android:layout_marginTop="31dp"
+            android:autofillHints=""
+            android:hint="@string/ImageUrl"
+            android:inputType="textWebEditText"
+            android:textColorHint="@color/baj4"
+            android:paddingStart="10dp"
+            android:background="@drawable/roundedborder"
+            android:textColor="@color/baj1"
+            tools:ignore="RtlSymmetry,TextFields"/>
+
+        <EditText
+            android:id="@+id/Author_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/productImageUrlEditText"
+            android:layout_marginTop="20dp"
+            android:autofillHints=""
+            android:hint="@string/Author"
+            android:inputType="textWebEditText"
+            android:textColorHint="@color/baj4"
+            android:paddingStart="10dp"
+            android:textColor="@color/baj1"
+            android:background="@drawable/roundedborder"
+            tools:ignore="RtlSymmetry"/>
+
+        <EditText
+            android:id="@+id/Book_Type"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/Author_name"
+            android:layout_marginTop="27dp"
+            android:autofillHints=""
+            android:hint="@string/type"
+            android:inputType="textWebEditText"
+            android:textColorHint="@color/baj4"
+            android:paddingStart="10dp"
+            android:background="@drawable/roundedborder"
+            android:textColor="@color/baj1"
+            tools:ignore="RtlSymmetry"/>
+
+
+        <EditText
+            android:id="@+id/download_url"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/Book_Type"
+            android:layout_marginTop="25dp"
+            android:ems="10"
+            android:textColor="@color/baj1"
+            android:textColorHint="@color/baj4"
+            android:inputType="text"
+            android:hint="@string/download_url"
+            android:paddingStart="10dp"
+            android:background="@drawable/roundedborder"
+            tools:ignore="RtlSymmetry,TextFields"/>
+
+        <Button
+            android:id="@+id/addProductButton"
+            android:layout_width="284dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/download_url"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="43dp"
+            android:backgroundTint="@color/baj4"
+            android:drawableBottom="@drawable/roundedborder"
+            android:text="@string/add_btn"
+            android:textColor="@color/baj1" />
+
+
+</RelativeLayout>
+
+
+
+

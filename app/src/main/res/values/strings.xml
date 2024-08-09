@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Kotobi</string>
+    <string name="ImageDescription">this is the butterfly image</string>
+    <string name="Sign">Sign In</string>
+    <string name="log">Log In</string>
+    <string name="Email">Enter your Email</string>
+    <string name="name">Enter your Name</string>
+    <string name="password">Enter your password</string>
+    <string name="verifier">verify</string>
+    <string name="verify_email">verify Email</string>
+    <string name="resend_email">resend Email</string>
+    <string name="book_name">Book Name</string>
+    <string name="book_description">Book Description</string>
+    <string name="book_price">Book Price</string>
+    <string name="books_image">Books Image</string>
+    <string name="add_btn">Add Books</string>
+    <string name="Admin">Admin</string>
+    <string name="Author">Author Name</string>
+    <string name="type">type of book</string>
+    <string name="ImageUrl">Enter Image Url</string>
+    <string name="search_books">search for Books</string>
+    <string name="sing_iother_method">Sing In With Other method</string>
+    <string name="client_id_par_defaut">999362514171-lnifccutnjcajd03siu9os5mg4m6f9h8.apps.googleusercontent.com</string>
+    <string name="image">image</string>
+    <string name="download_book">Download Book</string>
+    <string name="buy">buy Book</string>
+    <string name="sign_out">Sign out</string>
+    <string name="facebook_app_id">414309328318353</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">8c38deb5f69fdb281d561f75506d4f68</string>
+    <string name="already_have_account">already have account?</string>
+    <string name="welcome_back">welcome back</string>
+    <string name="looking_for_book">Looking for Book</string>
+    <string name="search">Search...</string>
+    <string name="download_url">download_url</string>
+</resources>

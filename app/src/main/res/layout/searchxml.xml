@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="400dp"
+    android:padding="16dp"
+    android:background="@color/baj5">
+
+
+    <TextView
+        android:id="@+id/book_Name1"
+        android:layout_width="253dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="0dp"
+        android:layout_toEndOf="@+id/book_Image1"
+        android:text="@string/book_name"
+        android:textColor="@color/baj1"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/book_Description1"
+        android:layout_width="265dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="52dp"
+        android:layout_below="@+id/book_Name1"
+        android:layout_toEndOf="@+id/book_Image1"
+        android:scrollbars="vertical"
+        android:padding="16dp"
+        android:text="@string/book_description"
+        android:textColor="@color/baj1"
+        android:textStyle="italic"/>
+
+
+    <TextView
+        android:id="@+id/book_Price1"
+        android:layout_width="148dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/typeBook1"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="17dp"
+        android:layout_toEndOf="@+id/Author1"
+        android:background="@drawable/border_textview"
+        android:text="@string/book_price"
+        android:textAlignment="center"
+        android:textColor="@color/baj4"
+        android:paddingTop="5dp"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/book_Image1"
+        android:layout_width="146dp"
+        android:layout_height="188dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-22dp"
+        android:layout_marginTop="-19dp"
+        app:srcCompat="@android:drawable/ic_menu_report_image" />
+
+    <TextView
+        android:id="@+id/Author1"
+        android:layout_width="147dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/book_Image1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-8dp"
+        android:layout_marginTop="6dp"
+        android:paddingStart="7dp"
+        android:text="@string/Author"
+        android:textColor="@color/baj1"
+        android:textStyle="bold"
+        tools:ignore="RtlSymmetry" />
+
+    <TextView
+        android:id="@+id/typeBook1"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/book_Description1"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="-50dp"
+        android:layout_toEndOf="@+id/Author1"
+        android:text="@string/type"
+        android:textColor="@color/baj1" />
+
+    <TextView
+        android:id="@+id/download"
+        android:layout_width="182dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/book_Price1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="77dp"
+        android:layout_toStartOf="@+id/buy_search"
+        android:background="@drawable/border_textview"
+        android:paddingTop="3dp"
+        android:text="@string/download_book"
+        android:textAlignment="center"
+        android:textColor="@color/baj4" />
+
+    <TextView
+        android:id="@+id/buy_search"
+        android:layout_width="146dp"
+        android:layout_height="32dp"
+        android:layout_below="@+id/book_Price1"
+        android:layout_alignEnd="@+id/book_Price1"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="-15dp"
+        android:background="@drawable/border_textview"
+        android:paddingTop="5dp"
+        android:text="@string/buy"
+        android:textAlignment="center"
+        android:textColor="@color/baj4" />
+
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+    android:background="@color/baj1">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="376dp"
+        android:layout_height="615dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="55dp"
+        app:cardBackgroundColor="@color/baj1"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp">
+
+           <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:autofillHints=""
+                android:background="@drawable/roundedborder"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:paddingStart="8dp"
+                android:textColor="@color/baj5"
+                android:textColorHint="@color/baj1"
+                tools:ignore="RtlSymmetry" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="631dp"
+                android:layout_below="@+id/search_bar"
+                android:layout_marginTop="7dp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

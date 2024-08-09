@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "999362514171",
+    "firebase_url": "https://kitabi-c6ab7-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "kitabi-c6ab7",
+    "storage_bucket": "kitabi-c6ab7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999362514171:android:09fa34c0cbaa90648bb45e",
+        "android_client_info": {
+          "package_name": "com.example.kotobi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBktPm-yF8lganSRaAIOAHe3HU1YgYJBz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:999362514171:android:4bcfade9c0cc4df38bb45e",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBktPm-yF8lganSRaAIOAHe3HU1YgYJBz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
