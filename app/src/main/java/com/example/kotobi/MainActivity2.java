@@ -23,7 +23,7 @@ public class MainActivity2 extends AppCompatActivity {
         SharedPreferences sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE);
         boolean isSignedIn = sharedPref.getBoolean("is_signed_in", false);
         boolean isVerified = sharedPref.getBoolean("is_verified", false);
-        boolean isSignedOut = sharedPref.getBoolean("is_signed_out", false);
+       // boolean isSignedOut = sharedPref.getBoolean("is_signed_out", false);
 
              /* if (isSignedOut) {
                  //user sign out , navigate to SignInActivity

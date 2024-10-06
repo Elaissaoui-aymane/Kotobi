@@ -1,8 +1,13 @@
 package com.example.kotobi;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.annotation.SuppressLint;
+
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,15 +17,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
 import java.io.File;
 import java.util.List;
+import java.util.Objects;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.DataViewHolder> {
 
@@ -61,17 +70,79 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.DataViewHo
         holder.buy1.setOnClickListener(v -> sendWhatsAppMessage(data));
         // Load image using Glide
         Glide.with(holder.book_Image1.getContext()).load(data.imageUrl).into(holder.book_Image1);
-        holder.download.setOnClickListener(v -> downloadFile(data.getFileUrl(), data.getName()));
-    }
+        //SharedPreferences sharedPref = cont.getSharedPreferences("user_pref", MODE_PRIVATE);
+        // boolean userEmail = sharedPref.getString("userEmail", "defaultEmail");
+        //boolean isSignedIn = sharedPref.getBoolean("is_signed_in", false);
+        holder.download.setOnClickListener(v -> {
+            FirebaseAuth mAuth = FirebaseAuth.getInstance();
+            FirebaseUser user = mAuth.getCurrentUser();
 
-    private void downloadFile(String fileUrl, String fileName) {
+            if (user != null) {
+                user.reload().addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        Toast.makeText(cont, "task.isSuccessful() yyyyyyyyyyyyyes", Toast.LENGTH_SHORT).show();
+                        downloadFile(data.getFileUrl());
+                    } else {
+                        // Re-authenticate the user
+                        mAuth.signInWithEmailAndPassword(Objects.requireNonNull(user.getEmail()), Objects.requireNonNull(user.getDisplayName()))
+                                .addOnCompleteListener(authTask -> {
+                                    if (authTask.isSuccessful()) {
+                                        downloadFile(data.getFileUrl());
+                                    } else {
+                                        Toast.makeText(cont, "Re-authentication failed", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                    }
+                });
+            } else {
+                // User is not signed in, prompt to sign in
+                Toast.makeText(cont, "Authenticate first", Toast.LENGTH_SHORT).show();
+            }
+
+
+
+
+
+          /*  if (isSignedIn) {
+                FirebaseStorage storage = FirebaseStorage.getInstance();
+                StorageReference storageRef = storage.getReferenceFromUrl(data.getFileUrl());
+                File localFile = new File(cont.getExternalFilesDir(null), data.getName());
+                storageRef.getFile(localFile).addOnSuccessListener(taskSnapshot -> Toast.makeText(cont, "File downloaded successfully", Toast.LENGTH_SHORT).show())
+                        .addOnFailureListener(exception -> Toast.makeText(cont, "File download failed: " + exception.getMessage(), Toast.LENGTH_LONG).show());
+            }else
+                Toast.makeText(cont, "Authenticate first", Toast.LENGTH_SHORT).show();*/
+        });
+
+
+
+
+    }
+    private void downloadFile(String fileUrl) {
         FirebaseStorage storage = FirebaseStorage.getInstance();
         StorageReference storageRef = storage.getReferenceFromUrl(fileUrl);
-        File localFile = new File(cont.getExternalFilesDir(null), fileName);
+        File localFile = new File(cont.getExternalFilesDir(null), fileUrl);
 
-        storageRef.getFile(localFile).addOnSuccessListener(taskSnapshot -> Toast.makeText(cont, "File downloaded successfully", Toast.LENGTH_SHORT).show())
-           .addOnFailureListener(exception -> Toast.makeText(cont, "File download failed: " + exception.getMessage(), Toast.LENGTH_LONG).show());
+        storageRef.getFile(localFile).addOnSuccessListener(taskSnapshot ->
+                        Toast.makeText(cont, "File downloaded successfully", Toast.LENGTH_SHORT).show())
+                .addOnFailureListener(e ->
+                        Toast.makeText(cont, e.getMessage(), Toast.LENGTH_LONG).show());
     }
+
+
+   /* private void checkAuthenticationAndDownloadData() {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+
+        if (currentUser != null) {
+            // User is signed in
+            downloadFile();
+        } else {
+            // User is not signed in
+            Toast.makeText(cont, "User not authenticated. Please sign in.", Toast.LENGTH_LONG).show();
+        }
+    }*/
+
+
 
     @Override
     public int getItemCount() {

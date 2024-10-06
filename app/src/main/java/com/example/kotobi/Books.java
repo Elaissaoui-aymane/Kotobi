@@ -6,7 +6,7 @@ public class Books {
     public String id;
     public String name;
     public String description;
-    public double price;
+    public Double price;
     public String imageUrl;
     public String author;
     public String type;
@@ -76,7 +76,7 @@ public class Books {
         this.fileUrl = fileUrl;
     }
 
-    // constructeur obligé pour appele DataSnapshot.getValue(Product.class)
+    // constructeur obligé pour appele DataSnapshot.getValue(Books.class)
     public Books() {
     }
 
