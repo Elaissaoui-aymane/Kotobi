@@ -6,7 +6,7 @@
     android:id="@+id/SignOut"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/baj4"
+    android:background="@color/baj1"
     android:orientation="vertical"
     tools:context=".DisplayBooksActivity">
 
@@ -18,26 +18,16 @@
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="wrap_content"
-        android:layout_height="592dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="3dp" />
-
-
 
     <TextView
         android:id="@+id/NameUSer"
         android:layout_width="214dp"
         android:layout_height="60dp"
         android:layout_above="@+id/recyclerView"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="6dp"
         android:layout_toStartOf="@+id/out"
         android:padding="5dp" />
 
@@ -45,9 +35,9 @@
         android:id="@+id/profileImage"
         android:layout_width="80dp"
         android:layout_height="79dp"
-        android:layout_above="@+id/recyclerView"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="3dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="2dp"
         android:layout_toStartOf="@+id/NameUSer"
         app:srcCompat="@android:drawable/ic_menu_report_image" />
 
@@ -56,23 +46,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/recyclerView"
+        android:layout_below="@+id/searchIcon"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="4dp"
-        android:backgroundTint="@color/baj1"
-        android:text="@string/sign_out"
-        android:textColor="@color/baj4"
+        android:layout_marginTop="25dp"
 
-        />
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="@color/baj5"
+        android:text="@string/sign_out"
+        android:textColor="@color/baj1" />
 
     <ImageView
         android:id="@+id/searchIcon"
         android:layout_width="74dp"
         android:layout_height="46dp"
-        android:layout_above="@+id/out"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="19dp"
-        android:layout_marginBottom="22dp"
-        android:contentDescription=""
+        android:contentDescription="searchIcon"
         app:srcCompat="@android:drawable/ic_menu_search" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="410dp"
+        android:layout_height="597dp"
+        android:layout_below="@+id/profileImage"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="3dp" />
 </RelativeLayout>

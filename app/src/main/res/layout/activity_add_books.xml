@@ -12,14 +12,14 @@
             android:layout_width="381dp"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="3dp"
             android:autofillHints=""
-            android:hint="@string/book_name"
-            android:textColor="@color/baj1"
-            android:inputType="text"
-            android:textColorHint="@color/baj1"
-            android:paddingStart="10dp"
             android:background="@drawable/roundedborder"
+            android:hint="@string/book_name"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:textColor="@color/baj1"
+            android:textColorHint="@color/baj1"
             tools:ignore="RtlSymmetry" />
 
         <EditText
@@ -27,100 +27,102 @@
             android:layout_width="386dp"
             android:layout_height="50dp"
             android:layout_below="@+id/productNameEditText"
-            android:layout_marginTop="34dp"
+            android:layout_marginTop="12dp"
             android:autofillHints=""
+            android:background="@drawable/roundedborder"
             android:hint="@string/book_description"
             android:inputType="text"
-            android:textColorHint="@color/baj1"
-            android:textColor="@color/baj1"
             android:paddingStart="10dp"
-            android:background="@drawable/roundedborder"
-            tools:ignore="RtlSymmetry"/>
+            android:textColor="@color/baj1"
+            android:textColorHint="@color/baj1"
+            tools:ignore="RtlSymmetry" />
 
         <EditText
             android:id="@+id/productPriceEditText"
             android:layout_width="392dp"
             android:layout_height="50dp"
             android:layout_below="@+id/productDescriptionEditText"
-            android:layout_marginTop="33dp"
+            android:layout_marginTop="10dp"
             android:autofillHints=""
+            android:background="@drawable/roundedborder"
             android:hint="@string/book_price"
             android:inputType="numberDecimal"
-            android:textColorHint="@color/baj1"
-            android:textColor="@color/baj1"
             android:paddingStart="10dp"
-            android:background="@drawable/roundedborder"
-            tools:ignore="RtlSymmetry"/>
+            android:textColor="@color/baj1"
+            android:textColorHint="@color/baj1"
+            tools:ignore="RtlSymmetry" />
 
         <EditText
             android:id="@+id/productImageUrlEditText"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/productPriceEditText"
-            android:layout_marginTop="31dp"
+            android:layout_marginTop="14dp"
             android:autofillHints=""
+            android:background="@drawable/roundedborder"
             android:hint="@string/ImageUrl"
             android:inputType="textWebEditText"
-            android:textColorHint="@color/baj1"
             android:paddingStart="10dp"
-            android:background="@drawable/roundedborder"
             android:textColor="@color/baj1"
-            tools:ignore="RtlSymmetry,TextFields"/>
+            android:textColorHint="@color/baj1"
+            tools:ignore="RtlSymmetry,TextFields" />
 
         <EditText
             android:id="@+id/Author_name"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/productImageUrlEditText"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="8dp"
             android:autofillHints=""
+            android:background="@drawable/roundedborder"
             android:hint="@string/Author"
             android:inputType="textWebEditText"
-            android:textColorHint="@color/baj1"
             android:paddingStart="10dp"
             android:textColor="@color/baj1"
-            android:background="@drawable/roundedborder"
-            tools:ignore="RtlSymmetry"/>
+            android:textColorHint="@color/baj1"
+            tools:ignore="RtlSymmetry" />
+
 
         <EditText
             android:id="@+id/Book_Type"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/Author_name"
-            android:layout_marginTop="27dp"
+            android:layout_marginTop="9dp"
             android:autofillHints=""
+            android:background="@drawable/roundedborder"
             android:hint="@string/type"
             android:inputType="textWebEditText"
-            android:textColorHint="@color/baj1"
             android:paddingStart="10dp"
-            android:background="@drawable/roundedborder"
             android:textColor="@color/baj1"
-            tools:ignore="RtlSymmetry"/>
-
+            android:textColorHint="@color/baj1"
+            tools:ignore="RtlSymmetry" />
 
         <EditText
             android:id="@+id/download_url"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/Book_Type"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/roundedborder"
             android:ems="10"
+            android:hint="@string/download_url"
+            android:inputType="text"
+            android:paddingStart="10dp"
             android:textColor="@color/baj1"
             android:textColorHint="@color/baj1"
-            android:inputType="text"
-            android:hint="@string/download_url"
-            android:paddingStart="10dp"
-            android:background="@drawable/roundedborder"
-            tools:ignore="RtlSymmetry,TextFields"/>
+            tools:ignore="RtlSymmetry,TextFields" />
 
         <Button
             android:id="@+id/addProductButton"
-            android:layout_width="284dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/download_url"
+            android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="50dp"
-            android:layout_marginEnd="43dp"
+            android:layout_marginStart="81dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="80dp"
             android:backgroundTint="@color/baj3"
             android:drawableBottom="@drawable/roundedborder"
             android:text="@string/add_btn"
