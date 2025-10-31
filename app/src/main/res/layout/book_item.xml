@@ -4,7 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="400dp"
     android:padding="16dp"
-    android:background="@color/baj4">
+    tools:context=".BookAdapter"
+    android:background="@drawable/roundedborder"
+    android:backgroundTint="@color/baj5"
+    android:layout_marginBottom="5dp"
+    android:layout_marginHorizontal="3sp">
 
 
     <TextView

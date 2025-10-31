@@ -9,6 +9,23 @@
     tools:context=".MainActivity"
     android:background="@color/baj1">
 
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="328dp"
+        android:layout_height="46dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="74dp"
+        android:layout_marginEnd="73dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/NomApplication"
+        android:textAlignment="center"
+        android:textColor="@color/baj4"
+        android:textSize="50sp"
+        android:textStyle="bold"/>
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="376dp"
         android:layout_height="615dp"
@@ -17,6 +34,7 @@
         app:cardBackgroundColor="@color/baj1"
         app:cardCornerRadius="8dp"
         app:cardElevation="10dp">
+
 
            <RelativeLayout
             android:layout_width="match_parent"
@@ -44,4 +62,5 @@
                 android:layout_marginTop="7dp" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
+
 </RelativeLayout>
